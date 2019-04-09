@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 
-import Display from './Display'
+import Display from './Display';
 import Dashboard from './Dashboard';
-
 
 class Container extends Component {
   state = {
     strike: 0,
     ball: 0,
+    out: 0,
   };
 
   fireStrike = () => {
-    this.state.strike === 3
+    this.state.strike === 2
       ? this.setState({
           strike: 0,
           ball: 0,
@@ -22,7 +22,7 @@ class Container extends Component {
   };
 
   fireBall = () => {
-    this.state.ball === 4
+    this.state.ball === 3
       ? this.setState({
           ball: 0,
           strike: 0,
@@ -53,15 +53,12 @@ class Container extends Component {
     return (
       <div>
         <h2>Baseball</h2>
-        <Display 
-        strike={this.state.strike}
-        ball={this.state.ball}
-        />
+        <Display strike={this.state.strike} ball={this.state.ball} />
         <Dashboard
-        fireStrike={this.fireStrike}
-        fireBall={this.fireBall}
-        fireFoul={this.fireFoul}
-        fireHit={this.fireHit}
+          fireStrike={this.fireStrike}
+          fireBall={this.fireBall}
+          fireFoul={this.fireFoul}
+          fireHit={this.fireHit}
         />
       </div>
     );

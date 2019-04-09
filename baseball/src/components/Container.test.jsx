@@ -22,8 +22,7 @@ describe('<Container />', () => {
     expect(wrapper.getByText(/strikes: 0/i));
     rtl.fireEvent.click(wrapper.getByText(/add strike/i));
     rtl.fireEvent.click(wrapper.getByText(/add strike/i));
-    rtl.fireEvent.click(wrapper.getByText(/add strike/i));
-    expect(wrapper.getByText(/strikes: 3/i));
+    expect(wrapper.getByText(/strikes: 2/i));
     rtl.fireEvent.click(wrapper.getByText(/add strike/i));
     expect(wrapper.getByText(/strikes: 0/i));
   });
@@ -32,7 +31,6 @@ describe('<Container />', () => {
     expect(wrapper.getByText(/balls: 0/i));
     rtl.fireEvent.click(wrapper.getByText(/add ball/i));
     expect(wrapper.getByText(/balls: 1/i));
-    rtl.fireEvent.click(wrapper.getByText(/add strike/i));
     rtl.fireEvent.click(wrapper.getByText(/add strike/i));
     rtl.fireEvent.click(wrapper.getByText(/add strike/i));
     rtl.fireEvent.click(wrapper.getByText(/add strike/i));
@@ -51,8 +49,7 @@ describe('<Container />', () => {
     rtl.fireEvent.click(wrapper.getByText(/add ball/i));
     rtl.fireEvent.click(wrapper.getByText(/add ball/i));
     rtl.fireEvent.click(wrapper.getByText(/add ball/i));
-    rtl.fireEvent.click(wrapper.getByText(/add ball/i));
-    expect(wrapper.getByText(/balls: 4/i));
+    expect(wrapper.getByText(/balls: 3/i));
     rtl.fireEvent.click(wrapper.getByText(/add ball/i));
     expect(wrapper.getByText(/balls: 0/i));
   });
@@ -61,7 +58,6 @@ describe('<Container />', () => {
     expect(wrapper.getByText(/strikes: 0/i));
     rtl.fireEvent.click(wrapper.getByText(/add strike/i));
     expect(wrapper.getByText(/strikes: 1/i));
-    rtl.fireEvent.click(wrapper.getByText(/add ball/i));
     rtl.fireEvent.click(wrapper.getByText(/add ball/i));
     rtl.fireEvent.click(wrapper.getByText(/add ball/i));
     rtl.fireEvent.click(wrapper.getByText(/add ball/i));
